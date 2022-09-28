@@ -8,9 +8,9 @@ export const schema = gql`
     salt: String!
     resetToken: String
     resetTokenExpiresAt: DateTime
-    profile: [profile]!
-    tweet: [tweet]!
-    like: [like]!
+    profile: [Profile]!
+    tweet: [Tweet]!
+    like: [Like]!
   }
 
   type Query {

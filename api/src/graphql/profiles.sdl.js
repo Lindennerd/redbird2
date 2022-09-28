@@ -7,7 +7,7 @@ export const schema = gql`
     city: String
     country: String
     image: String
-    user: user!
+    user: User!
     userId: Int!
     theme: theme!
   }

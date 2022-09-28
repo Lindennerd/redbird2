@@ -1,24 +1,24 @@
 export const schema = gql`
   type Tweet {
     id: Int!
-    user: user!
+    user: User!
     userId: Int!
     text: String!
     image: String
     createdAt: DateTime!
     replyId: Int
-    reply: tweet
-    replies: [tweet]!
+    reply: Tweet
+    replies: [Tweet]!
     retweetId: Int
-    retweet: tweet
-    retweets: [tweet]!
-    likes: [like]!
-    hashtags: [hashtag]!
+    retweet: Tweet
+    retweets: [Tweet]!
+    likes: [Like]!
+    hashtags: [Hashtag]!
   }
 
   type Query {
-    tweets: [Tweet!]! @requireAuth
-    tweet(id: Int!): Tweet @requireAuth
+    tweets: [Tweet!]! @skipAuth
+    tweet(id: Int!): Tweet @skipAuth
   }
 
   input CreateTweetInput {

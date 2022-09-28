@@ -1,8 +1,8 @@
 export const schema = gql`
   type Like {
     id: Int!
-    tweet: tweet!
-    user: user!
+    tweet: Tweet!
+    user: User!
     tweetId: Int!
     userId: Int!
   }

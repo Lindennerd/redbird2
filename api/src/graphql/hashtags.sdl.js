@@ -2,7 +2,7 @@ export const schema = gql`
   type Hashtag {
     id: Int!
     text: String!
-    tweet: tweet
+    tweet: Tweet
     tweetId: Int
   }
 
